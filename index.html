@@ -1,128 +1,662 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>English with Teacher April</title>
-<style>
-:root{color-scheme:light dark;--bg:light-dark(#fff8f4,#201817);--surface:light-dark(#ffffff,#2b2221);--text:light-dark(#302321,#fff7f4);--muted:light-dark(#75635f,#cdbbb6);--accent:light-dark(#b85c63,#ef9ba2);--accent2:light-dark(#f5ddd8,#503334);--border:light-dark(#ead8d2,#493a38)}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-.root{min-height:100vh;background-color:var(--bg)}
-nav{max-width:1050px;margin:auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:800;font-size:20px}
-.navlink{color:var(--text);text-decoration:none;font-size:14px}
-.hero{max-width:1050px;margin:auto;padding:70px 24px 85px;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
-.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
-.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin:12px 0 20px}
-.hero p{font-size:19px;color:var(--muted);max-width:650px}
-.btn{display:inline-block;margin-top:20px;background:var(--accent);color:white;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:12px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:0 18px 45px rgba(70,35,30,.08)}
-.card h2{margin-top:0}
-.mini{display:grid;gap:13px}
-.mini div{background:var(--accent2);padding:14px 16px;border-radius:14px;font-weight:700}
-section{max-width:1050px;margin:auto;padding:55px 24px}
-section h2{font-size:34px;margin:0 0 12px}
-.lead{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.item{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px}
-.item h3{margin-top:0}
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}
-.quote{font-size:26px;font-weight:700;background:var(--accent2);padding:30px;border-radius:22px}
-.contact{background:var(--surface);border:1px solid var(--border);border-radius:24px;text-align:center;padding:42px}
-.contact p{color:var(--muted)}
-footer{text-align:center;color:var(--muted);padding:30px 24px 45px;font-size:13px}
-@media(max-width:760px){
-.hero,.about{grid-template-columns:1fr}
-.grid{grid-template-columns:1fr}
-.hero{padding-top:40px}
-.hero h1{font-size:46px}
-nav{padding:18px}
-.navlink{display:none}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>English with Teacher April | Private Online English Lessons</title>
+
+  <meta name="description" content="Private online English lessons with Teacher April for kids, adults, and business English learners. Friendly, practical, and personalized lessons.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fffaf7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #8b5e83;
+    }
+
+    nav a {
+      color: #444;
+      margin-left: 22px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #8b5e83;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      background: #8b5e83;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #6f4968;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      color: #8b5e83;
+    }
+
+    .btn-light:hover {
+      background: #f5eeee;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: linear-gradient(135deg, #f8e8ef, #fffaf7);
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      color: #8b5e83;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 27px;
+      color: #444;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      color: #666;
+    }
+
+    /* SECTION */
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      color: #8b5e83;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #666;
+    }
+
+    /* SKILLS */
+    .skills {
+      background: white;
+    }
+
+    .skill-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .skill {
+      padding: 25px 15px;
+      text-align: center;
+      background: #fff7fa;
+      border-radius: 18px;
+      border: 1px solid #f1dce5;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .skill span {
+      display: block;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    /* LESSONS */
+    .lesson-grid {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .lesson-card {
+      background: white;
+      padding: 35px 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      text-align: center;
+      border-top: 5px solid #c991b5;
+    }
+
+    .lesson-card .icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .lesson-card h3 {
+      color: #8b5e83;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .lesson-card p {
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #f8e8ef;
+    }
+
+    .about-container {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .teacher-box {
+      background: white;
+      border-radius: 25px;
+      padding: 45px 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .teacher-icon {
+      font-size: 75px;
+      margin-bottom: 15px;
+    }
+
+    .teacher-box h3 {
+      color: #8b5e83;
+      font-size: 27px;
+    }
+
+    .about-text h2 {
+      color: #8b5e83;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding: 20px;
+      background: white;
+      border-left: 5px solid #8b5e83;
+      border-radius: 10px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* WHY CHOOSE ME */
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .why-item {
+      padding: 22px;
+      background: #fff7fa;
+      border-radius: 15px;
+    }
+
+    .why-item strong {
+      color: #8b5e83;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #8b5e83, #a97499);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #4b3547;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .contact h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 4px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="root">
 
-<nav>
-<div class="brand">English with Teacher April</div>
-<a class="navlink" href="#contact">Book a Lesson</a>
-</nav>
+  <!-- HEADER -->
+  <header>
 
-<main>
+    <div class="logo">
+      English with Teacher April
+    </div>
 
-<section class="hero">
-<div>
-<div class="eyebrow">Private Online English Lessons</div>
-<h1>English is more fun when you learn with confidence.</h1>
-<p>Friendly, practical English lessons for children and adults, designed around each learner's goals and level.</p>
-<a class="btn" href="#contact">Book a Trial Lesson</a>
-</div>
+    <nav>
+      <a href="#lessons">Lessons</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<div class="card">
-<h2>What we can work on</h2>
-<div class="mini">
-<div>🗣️ Speaking & Conversation</div>
-<div>📚 Grammar & Vocabulary</div>
-<div>🔤 Reading & Phonics</div>
-<div>💼 English for Work</div>
-</div>
-</div>
-</section>
+  </header>
 
-<section>
-<div class="eyebrow">Lessons</div>
-<h2>Simple, personalized learning</h2>
-<p class="lead">Choose a lesson format that fits your schedule and learning goals.</p>
 
-<div class="grid">
-<div class="item">
-<h3>Kids English</h3>
-<p>Fun activities, phonics, vocabulary, reading, and simple conversation practice.</p>
-</div>
+  <!-- HERO -->
+  <section class="hero">
 
-<div class="item">
-<h3>Adult English</h3>
-<p>Speaking practice, grammar, vocabulary, and everyday English for real situations.</p>
-</div>
+    <h1>English with Teacher April</h1>
 
-<div class="item">
-<h3>Business English</h3>
-<p>Practical English for meetings, presentations, calls, and workplace communication.</p>
-</div>
-</div>
-</section>
+    <h2>Private Online English Lessons</h2>
 
-<section class="about">
-<div class="quote">
-“My goal is to help you feel comfortable using English — not afraid of making mistakes.”
-</div>
+    <p>
+      English is more fun when you learn with confidence.
+    </p>
 
-<div>
-<div class="eyebrow">About Teacher April</div>
-<h2>Hi, I'm April!</h2>
-<p class="lead">I'm an experienced ESL teacher with 6+ years of teaching experience. I've taught learners from young children to adults and from beginner to advanced levels.</p>
-<p>I use friendly conversations, activities, visual materials, and practical examples to make lessons engaging and useful.</p>
-</div>
-</section>
+    <p style="margin-top: 12px;">
+      Friendly, practical English lessons for children and adults,
+      designed around each learner's goals, level, and learning style.
+    </p>
 
-<section id="contact">
-<div class="contact">
-<div class="eyebrow">Ready to learn?</div>
-<h2>Let's make English fun.</h2>
-<p>Send me a message to ask about available schedules, lesson options, or a trial class.</p>
-<a class="btn" href="mailto:aprilluv001@gmail.com">Message Teacher April</a>
-</div>
-</section>
+    <a class="btn" href="#contact">
+      Book a Trial Lesson
+    </a>
 
-</main>
+  </section>
 
-<footer>
-English with Teacher April · Private Online ESL Tutoring
-</footer>
 
-</div>
+  <!-- SKILLS -->
+  <section class="skills">
+
+    <h2 class="section-title">
+      What We Can Work On
+    </h2>
+
+    <p class="section-intro">
+      Build your English skills through friendly conversations,
+      practical activities, and personalized lessons.
+    </p>
+
+    <div class="skill-grid">
+
+      <div class="skill">
+        <span>🗣️</span>
+        Speaking & Conversation
+      </div>
+
+      <div class="skill">
+        <span>📚</span>
+        Grammar & Vocabulary
+      </div>
+
+      <div class="skill">
+        <span>🔤</span>
+        Reading & Phonics
+      </div>
+
+      <div class="skill">
+        <span>💼</span>
+        English for Work
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LESSONS -->
+  <section id="lessons">
+
+    <h2 class="section-title">
+      Lessons for Your Goals
+    </h2>
+
+    <p class="section-intro">
+      Choose a lesson that fits your learning goals,
+      level, and schedule.
+    </p>
+
+    <div class="lesson-grid">
+
+      <div class="lesson-card">
+
+        <div class="icon">👧</div>
+
+        <h3>Kids English</h3>
+
+        <p>
+          Fun and engaging lessons with phonics, vocabulary,
+          reading, speaking activities, and simple conversations.
+        </p>
+
+      </div>
+
+
+      <div class="lesson-card">
+
+        <div class="icon">👩</div>
+
+        <h3>Adult English</h3>
+
+        <p>
+          Improve speaking, grammar, vocabulary, and everyday
+          English for real-life communication.
+        </p>
+
+      </div>
+
+
+      <div class="lesson-card">
+
+        <div class="icon">💼</div>
+
+        <h3>Business English</h3>
+
+        <p>
+          Practical English for meetings, presentations,
+          video calls, workplace communication, and professional situations.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+
+    <div class="about-container">
+
+      <div class="teacher-box">
+
+        <div class="teacher-icon">
+          👩‍🏫
+        </div>
+
+        <h3>Teacher April</h3>
+
+        <p>
+          ESL Teacher
+        </p>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <h2>Hi, I'm April!</h2>
+
+        <p>
+          I'm an experienced ESL teacher with 6+ years of teaching
+          experience. I've taught learners from young children to
+          adults, from beginner to advanced levels.
+        </p>
+
+        <p>
+          My lessons are friendly, practical, and personalized.
+          I use conversations, activities, visual materials, and
+          real-life examples to make English useful and enjoyable.
+        </p>
+
+        <p>
+          Whether you're learning English for school, work,
+          travel, everyday conversations, or personal growth,
+          we'll work together toward your goals.
+        </p>
+
+        <div class="quote">
+          “My goal is to help you feel comfortable using English —
+          not afraid of making mistakes.”
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY CHOOSE ME -->
+  <section class="why">
+
+    <h2 class="section-title">
+      Why Learn with Teacher April?
+    </h2>
+
+    <p class="section-intro">
+      A comfortable learning environment where you can practice,
+      ask questions, and grow your confidence.
+    </p>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        🌷 <strong>Patient & Friendly</strong><br>
+        Learn in a relaxed environment without pressure.
+      </div>
+
+      <div class="why-item">
+        🎯 <strong>Personalized Lessons</strong><br>
+        Lessons are adapted to your level and learning goals.
+      </div>
+
+      <div class="why-item">
+        💬 <strong>Lots of Speaking Practice</strong><br>
+        Build confidence through meaningful conversations.
+      </div>
+
+      <div class="why-item">
+        📖 <strong>Practical Materials</strong><br>
+        Learn with activities, examples, and useful English.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>Ready to Learn?</h2>
+
+    <p>
+      Let's make English fun! Send me a message to ask about
+      available schedules, lesson options, or a trial class.
+    </p>
+
+    <a
+      class="btn btn-light"
+      href="mailto:aprilluv001@gmail.com?subject=Trial%20Lesson%20Inquiry"
+    >
+      📩 Message Teacher April
+    </a>
+
+    <br>
+
+    <a
+      class="email"
+      href="mailto:aprilluv001@gmail.com"
+    >
+      aprilluv001@gmail.com
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    English with Teacher April · Private Online ESL Tutoring
+
+    <br>
+
+    © 2026 Teacher April
+
+  </footer>
+
 </body>
 </html>
