@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>English with Teacher April | Private Online English Lessons</title>
-
-  <meta name="description" content="Private online English lessons with Teacher April for kids, adults, and business English learners. Friendly, practical, and personalized lessons.">
+  <meta name="description" content="Private online English lessons with Teacher April for children, adults, and business English learners. Friendly, practical, personalized lessons.">
 
   <style>
     * {
@@ -30,7 +30,6 @@
       text-decoration: none;
     }
 
-    /* HEADER */
     header {
       background: white;
       padding: 18px 7%;
@@ -40,7 +39,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     }
 
     .logo {
@@ -60,7 +59,6 @@
       color: #8b5e83;
     }
 
-    /* BUTTONS */
     .btn {
       display: inline-block;
       background: #8b5e83;
@@ -86,7 +84,6 @@
       background: #f5eeee;
     }
 
-    /* HERO */
     .hero {
       padding: 90px 7%;
       text-align: center;
@@ -107,12 +104,11 @@
 
     .hero p {
       max-width: 700px;
-      margin: auto;
+      margin: 0 auto;
       font-size: 18px;
       color: #666;
     }
 
-    /* SECTION */
     section {
       padding: 75px 7%;
     }
@@ -131,7 +127,6 @@
       color: #666;
     }
 
-    /* SKILLS */
     .skills {
       background: white;
     }
@@ -160,7 +155,6 @@
       margin-bottom: 10px;
     }
 
-    /* LESSONS */
     .lesson-grid {
       max-width: 1050px;
       margin: auto;
@@ -173,7 +167,7 @@
       background: white;
       padding: 35px 28px;
       border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
       text-align: center;
       border-top: 5px solid #c991b5;
     }
@@ -193,7 +187,7 @@
       color: #666;
     }
 
-    /* ABOUT */
+    /* ABOUT SECTION */
     .about {
       background: #f8e8ef;
     }
@@ -210,23 +204,35 @@
     .teacher-box {
       background: white;
       border-radius: 25px;
-      padding: 45px 25px;
+      padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      min-width: 0;
     }
 
     .teacher-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 5px solid #f1dce5;
-}
+      display: block;
+      width: 180px;
+      height: 180px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 5px solid #f1dce5;
+    }
 
     .teacher-box h3 {
       color: #8b5e83;
       font-size: 27px;
+      margin-bottom: 4px;
+    }
+
+    .teacher-box p {
+      color: #666;
+    }
+
+    .about-text {
+      min-width: 0;
     }
 
     .about-text h2 {
@@ -250,7 +256,6 @@
       color: #555;
     }
 
-    /* WHY CHOOSE ME */
     .why {
       background: white;
     }
@@ -273,7 +278,6 @@
       color: #8b5e83;
     }
 
-    /* CONTACT */
     .contact {
       background: linear-gradient(135deg, #8b5e83, #a97499);
       color: white;
@@ -299,7 +303,6 @@
       font-size: 17px;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 25px;
@@ -308,17 +311,20 @@
       font-size: 14px;
     }
 
-    /* MOBILE */
     @media (max-width: 800px) {
-
       header {
         padding: 15px 5%;
         flex-direction: column;
         gap: 10px;
       }
 
+      nav {
+        text-align: center;
+      }
+
       nav a {
-        margin: 0 7px;
+        display: inline-block;
+        margin: 4px 7px;
         font-size: 13px;
       }
 
@@ -351,7 +357,18 @@
       }
 
       .about-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+      }
+
+      .teacher-box {
+        width: 100%;
+        max-width: 420px;
+        margin: auto;
+      }
+
+      .about-text {
+        width: 100%;
       }
 
       .why-grid {
@@ -368,50 +385,34 @@
     }
 
     @media (max-width: 450px) {
-
       .skill-grid {
         grid-template-columns: 1fr;
       }
 
-      nav {
-        text-align: center;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 4px;
-      }
-
       .hero h1 {
         font-size: 32px;
+      }
+
+      .about-text h2 {
+        font-size: 29px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header>
-
-    <div class="logo">
-      English with Teacher April
-    </div>
+    <div class="logo">English with Teacher April</div>
 
     <nav>
       <a href="#lessons">Lessons</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </header>
 
-
-  <!-- HERO -->
   <section class="hero">
-
     <h1>English with Teacher April</h1>
-
     <h2>Private Online English Lessons</h2>
 
     <p>
@@ -423,19 +424,11 @@
       designed around each learner's goals, level, and learning style.
     </p>
 
-    <a class="btn" href="#contact">
-      Book a Trial Lesson
-    </a>
-
+    <a class="btn" href="#contact">Book a Trial Lesson</a>
   </section>
 
-
-  <!-- SKILLS -->
   <section class="skills">
-
-    <h2 class="section-title">
-      What We Can Work On
-    </h2>
+    <h2 class="section-title">What We Can Work On</h2>
 
     <p class="section-intro">
       Build your English skills through friendly conversations,
@@ -443,114 +436,82 @@
     </p>
 
     <div class="skill-grid">
-
       <div class="skill">
         <span>🗣️</span>
-        Speaking & Conversation
+        Speaking &amp; Conversation
       </div>
 
       <div class="skill">
         <span>📚</span>
-        Grammar & Vocabulary
+        Grammar &amp; Vocabulary
       </div>
 
       <div class="skill">
         <span>🔤</span>
-        Reading & Phonics
+        Reading &amp; Phonics
       </div>
 
       <div class="skill">
         <span>💼</span>
         English for Work
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- LESSONS -->
   <section id="lessons">
-
-    <h2 class="section-title">
-      Lessons for Your Goals
-    </h2>
+    <h2 class="section-title">Lessons for Your Goals</h2>
 
     <p class="section-intro">
-      Choose a lesson that fits your learning goals,
-      level, and schedule.
+      Choose a lesson that fits your learning goals, level, and schedule.
     </p>
 
     <div class="lesson-grid">
-
       <div class="lesson-card">
-
         <div class="icon">👧</div>
-
         <h3>Kids English</h3>
-
         <p>
           Fun and engaging lessons with phonics, vocabulary,
           reading, speaking activities, and simple conversations.
         </p>
-
       </div>
 
-
       <div class="lesson-card">
-
         <div class="icon">👩</div>
-
         <h3>Adult English</h3>
-
         <p>
           Improve speaking, grammar, vocabulary, and everyday
           English for real-life communication.
         </p>
-
       </div>
 
-
       <div class="lesson-card">
-
         <div class="icon">💼</div>
-
         <h3>Business English</h3>
-
         <p>
           Practical English for meetings, presentations,
           video calls, workplace communication, and professional situations.
         </p>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ABOUT -->
   <section id="about" class="about">
-
     <div class="about-container">
 
+      <!-- One profile card only -->
       <div class="teacher-box">
+        <img
+          src="teacher-april.jpg"
+          alt="Teacher April, English tutor"
+          class="teacher-photo"
+        >
 
-  <img
-    src="teacher-april.jpg"
-    alt="Teacher April, English tutor"
-    class="teacher-photo"
-  >
+        <h3>Teacher April</h3>
+        <p>ESL Teacher</p>
+      </div>
 
-  <h3>Teacher April</h3>
-
-  <p>ESL Teacher</p>
-
-</div>
-
-
+      <!-- Introduction beside the profile card -->
       <div class="about-text">
-
         <h2>Hi, I'm April!</h2>
 
         <p>
@@ -572,23 +533,16 @@
         </p>
 
         <div class="quote">
-          “My goal is to help you feel comfortable using English —
-          not afraid of making mistakes.”
+          "My goal is to help you feel comfortable using English —
+          not afraid of making mistakes."
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-
-  <!-- WHY CHOOSE ME -->
   <section class="why">
-
-    <h2 class="section-title">
-      Why Learn with Teacher April?
-    </h2>
+    <h2 class="section-title">Why Learn with Teacher April?</h2>
 
     <p class="section-intro">
       A comfortable learning environment where you can practice,
@@ -596,9 +550,8 @@
     </p>
 
     <div class="why-grid">
-
       <div class="why-item">
-        🌷 <strong>Patient & Friendly</strong><br>
+        🌷 <strong>Patient &amp; Friendly</strong><br>
         Learn in a relaxed environment without pressure.
       </div>
 
@@ -616,15 +569,10 @@
         📖 <strong>Practical Materials</strong><br>
         Learn with activities, examples, and useful English.
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- CONTACT -->
   <section id="contact" class="contact">
-
     <h2>Ready to Learn?</h2>
 
     <p>
@@ -641,26 +589,15 @@
 
     <br>
 
-    <a
-      class="email"
-      href="mailto:aprilluv001@gmail.com"
-    >
+    <a class="email" href="mailto:aprilluv001@gmail.com">
       aprilluv001@gmail.com
     </a>
-
   </section>
 
-
-  <!-- FOOTER -->
   <footer>
-
     English with Teacher April · Private Online ESL Tutoring
-
     <br>
-
-    © 2026 Teacher April
-
+    &copy; 2026 Teacher April
   </footer>
-
 </body>
 </html>
