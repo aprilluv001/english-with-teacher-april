@@ -1,909 +1,354 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TEACHING PORTFOLIO SECTION -->
+<style>
+  .april-portfolio {
+    --portfolio-purple: #7556a8;
+    --portfolio-pink: #f8e8f1;
+    --portfolio-cream: #fffaf5;
+    --portfolio-text: #40354b;
+    font-family: inherit;
+    color: var(--portfolio-text);
+    line-height: 1.8;
+    padding: 45px 20px;
+    background: var(--portfolio-cream);
+  }
 
-  <title>English with Teacher April | Private Online English Lessons</title>
+  .april-portfolio * {
+    box-sizing: border-box;
+  }
 
-  <meta name="description" content="Learn English with Teacher April through friendly, personalized online lessons for children and adults. Improve speaking, grammar, reading, and confidence.">
+  .april-portfolio .portfolio-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-  <meta name="theme-color" content="#8b5e83">
+  .april-portfolio .portfolio-heading {
+    text-align: center;
+    color: var(--portfolio-purple);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0 12px;
+  }
 
-  <style>
-    :root {
-      --purple: #8b5e83;
-      --purple-dark: #684563;
-      --pink: #f8e8ef;
-      --pink-light: #fff7fa;
-      --cream: #fffaf7;
-      --text: #444;
-      --white: #fff;
-    }
+  .april-portfolio .portfolio-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  .april-portfolio .story-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: clamp(20px, 4vw, 38px);
+    margin: 25px 0 45px;
+    box-shadow: 0 5px 20px rgba(80, 55, 100, 0.08);
+    border: 1px solid #f0e4f4;
+  }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
-    }
+  .april-portfolio .story-card h3 {
+    color: var(--portfolio-purple);
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--cream);
-    }
+  .april-portfolio .gallery-section {
+    margin: 45px 0;
+  }
 
-    img {
-      max-width: 100%;
-    }
+  .april-portfolio .gallery-title {
+    text-align: center;
+    color: var(--portfolio-purple);
+    font-size: 1.65rem;
+    margin-bottom: 8px;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  .april-portfolio .gallery-description {
+    text-align: center;
+    margin: 0 auto 25px;
+    max-width: 700px;
+  }
 
-    .container {
-      width: min(1100px, 88%);
-      margin: 0 auto;
-    }
+  .april-portfolio .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
 
-    .section {
-      padding: 75px 0;
-    }
+  .april-portfolio .portfolio-photo {
+    margin: 0;
+    background: #ffffff;
+    padding: 9px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(80, 55, 100, 0.10);
+    overflow: hidden;
+  }
 
-    .section-title {
-      color: var(--purple);
-      text-align: center;
-      font-size: clamp(28px, 4vw, 36px);
-      line-height: 1.3;
-      margin-bottom: 15px;
-    }
+  .april-portfolio .portfolio-photo img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 9px;
+  }
 
-    .section-intro {
-      max-width: 720px;
-      text-align: center;
-      margin: 0 auto 40px;
-      color: #666;
-    }
+  .april-portfolio .photo-caption {
+    text-align: center;
+    padding: 10px 5px 3px;
+    font-size: 0.92rem;
+  }
 
-    /* HEADER AND NAVIGATION */
+  .april-portfolio .testimonials-heading {
+    color: var(--portfolio-purple);
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 45px 0 15px;
+  }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.97);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-    }
+  .april-portfolio .contact-card {
+    text-align: center;
+    background: var(--portfolio-pink);
+    border-radius: 18px;
+    padding: 28px 20px;
+    margin-top: 40px;
+  }
 
-    .header-inner {
-      width: min(1200px, 92%);
-      margin: 0 auto;
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+  .april-portfolio .contact-card h3 {
+    color: var(--portfolio-purple);
+    margin-top: 0;
+  }
 
-    .logo {
-      color: var(--purple);
-      font-size: 21px;
-      font-weight: 700;
-    }
+  .april-portfolio .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
+  .april-portfolio .contact-links a {
+    display: inline-block;
+    color: #ffffff;
+    background: var(--portfolio-purple);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    overflow-wrap: anywhere;
+  }
 
-    nav a {
-      color: #444;
-      font-size: 14px;
-      font-weight: 600;
-    }
+  .april-portfolio .contact-links a:hover {
+    opacity: 0.85;
+  }
 
-    nav a:hover {
-      color: var(--purple);
-    }
+  .april-portfolio .portfolio-tagline {
+    font-weight: bold;
+    color: var(--portfolio-purple);
+    margin-bottom: 0;
+  }
 
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-      border: 2px solid var(--purple);
-      border-radius: 30px;
-      background: var(--purple);
-      color: var(--white);
-      padding: 12px 25px;
-      margin-top: 20px;
-      font-weight: 700;
-      text-align: center;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .button:hover {
-      background: var(--purple-dark);
-      border-color: var(--purple-dark);
-      transform: translateY(-2px);
-    }
-
-    .button-light {
-      background: var(--white);
-      color: var(--purple);
-      border-color: var(--white);
-    }
-
-    .button-light:hover {
-      background: var(--pink);
-      border-color: var(--pink);
-      color: var(--purple-dark);
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 95px 0 100px;
-      text-align: center;
-      background: linear-gradient(135deg, var(--pink), var(--cream));
-    }
-
-    .hero-content {
-      max-width: 850px;
-      margin: 0 auto;
-    }
-
-    .hero-label {
-      display: inline-block;
-      background: var(--white);
-      color: var(--purple);
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      color: var(--purple);
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      color: #494049;
-      font-size: clamp(21px, 3vw, 28px);
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #666;
-      font-size: 18px;
-    }
-
-    /* LEARNING AREAS */
-
-    .skills {
-      background: var(--white);
-    }
-
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .skill-card {
-      background: var(--pink-light);
-      border: 1px solid #f0dce6;
-      border-radius: 18px;
-      padding: 25px 15px;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    .skill-icon {
-      display: block;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    /* LESSON OPTIONS */
-
-    .lesson-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .lesson-card {
-      background: var(--white);
-      padding: 30px 25px;
-      border-radius: 20px;
-      border-top: 5px solid #c991b5;
-      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
-      text-align: center;
-    }
-
-    .lesson-icon {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .lesson-card h3 {
-      color: var(--purple);
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .lesson-card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* ABOUT TEACHER */
-
-    .about {
-      background: var(--pink);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.4fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .teacher-card {
-      padding: 35px 25px;
-      background: var(--white);
-      border-radius: 24px;
-      text-align: center;
-      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    .teacher-photo {
-      width: 190px;
-      height: 190px;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-      border: 5px solid var(--pink);
-      margin: 0 auto 18px;
-    }
-
-    .teacher-card h3 {
-      color: var(--purple);
-      font-size: 25px;
-    }
-
-    .teacher-card p {
-      color: #666;
-    }
-
-    .credentials {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: var(--pink-light);
-      color: var(--purple);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .about-text h2 {
-      color: var(--purple);
-      font-size: clamp(29px, 4vw, 36px);
-      line-height: 1.3;
-      margin-bottom: 18px;
-    }
-
-    .about-text p {
-      margin-bottom: 15px;
-    }
-
-    .teacher-quote {
-      background: var(--white);
-      border-left: 5px solid var(--purple);
-      border-radius: 8px;
-      padding: 18px 22px;
-      margin-top: 22px;
-      font-style: italic;
-    }
-
-    /* WHY LEARN WITH ME */
-
-    .why {
-      background: var(--white);
-    }
-
-    .why-grid {
-      display: grid;
+  @media (max-width: 760px) {
+    .april-portfolio .portfolio-gallery {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 12px;
     }
 
-    .why-card {
-      background: var(--pink-light);
-      border-radius: 16px;
-      padding: 23px;
+    .april-portfolio .portfolio-photo img {
+      height: 190px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .april-portfolio {
+      padding: 30px 12px;
     }
 
-    .why-card h3 {
-      color: var(--purple);
-      font-size: 18px;
-      margin-bottom: 6px;
+    .april-portfolio .portfolio-gallery {
+      grid-template-columns: 1fr;
     }
 
-    .why-card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* CONTACT SECTION */
-
-    .contact {
-      background: linear-gradient(135deg, #8b5e83, #a97499);
-      color: var(--white);
-      text-align: center;
-    }
-
-    .contact .section-title {
-      color: var(--white);
-    }
-
-    .contact-intro {
-      max-width: 680px;
-      margin: 0 auto 35px;
-      font-size: 17px;
-    }
-
-    .contact-panel {
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 35px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 24px;
-    }
-
-    .contact-panel h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .contact-panel > p {
-      margin-bottom: 10px;
-    }
-
-    .contact-link {
-      display: inline-block;
-      margin: 16px 0;
-      padding: 13px 24px;
-      border-radius: 30px;
-      background: var(--white);
-      color: var(--purple);
-      font-weight: 700;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .contact-link:hover {
-      background: var(--pink);
-      transform: translateY(-2px);
-    }
-
-    .wechat-box {
-      margin: 30px auto 20px;
-      padding: 25px 20px;
-      background: var(--white);
-      color: var(--text);
-      border-radius: 18px;
-    }
-
-    .wechat-box h3 {
-      color: var(--purple);
-    }
-
-    .wechat-box p {
-      font-size: 15px;
-    }
-
-    .wechat-qr {
-      display: block;
-      width: 240px;
-      max-width: 100%;
+    .april-portfolio .portfolio-photo img {
       height: auto;
-      margin: 20px auto 0;
-      border-radius: 8px;
+      max-height: 350px;
+      object-fit: contain;
+      background: #f7f2f8;
     }
+  }
+</style>
 
-    .booking-note {
-      margin: 20px auto;
-      font-size: 14px;
-    }
+<section class="april-portfolio" id="portfolio">
+  <div class="portfolio-container">
 
-    .email-link {
-      display: inline-block;
-      color: var(--white);
-      font-weight: 700;
-      margin-top: 10px;
-      overflow-wrap: anywhere;
-    }
+    <!-- INTRODUCTION -->
+    <h2 class="portfolio-heading">See My Teaching in Action</h2>
+    <p class="portfolio-intro">
+      A little look into my teaching journey, the learning experiences I create,
+      and the connections I build with my students. As an English teacher,
+      I aim to help learners develop their skills and communicate with confidence.
+    </p>
 
-    .email-link:hover {
-      text-decoration: underline;
-    }
+    <!-- STUDENT STORY -->
+    <article class="story-card">
+      <h3>Mizuki’s Journey</h3>
 
-    /* FOOTER */
+      <p>
+        Mizuki Morita, a learner from Japan, has been my student for over two
+        years. Throughout this time, I’ve had the privilege of witnessing his
+        growth—not only in English, but also in his academic and professional journey.
+      </p>
 
-    footer {
-      background: #4b3547;
-      color: var(--white);
-      text-align: center;
-      padding: 25px 6%;
-      font-size: 14px;
-    }
+      <p>
+        I first met him while he was pursuing his PhD, and I’m incredibly proud
+        to have witnessed him reach such an amazing milestone: becoming a
+        licensed doctor with a Doctor of Science.
+      </p>
 
-    footer p + p {
-      margin-top: 5px;
-    }
+      <p>
+        Over the years, our relationship has grown beyond that of a student
+        and teacher. Through our lessons and countless conversations, we’ve
+        built a genuine friendship, and I’m truly grateful for the connection
+        we’ve developed along the way.
+      </p>
 
-    /* TABLET AND MOBILE */
+      <p>
+        I’ve watched his confidence, communication skills, and English ability
+        grow tremendously. His dedication, perseverance, and passion for
+        learning have always inspired me. Being able to witness his journey
+        from pursuing his PhD to becoming a doctor has been such a meaningful
+        experience for me.
+      </p>
 
-    @media (max-width: 850px) {
-      .header-inner {
-        padding: 14px 0;
-        flex-direction: column;
-        gap: 12px;
-      }
+      <p>
+        I’m grateful that our paths crossed, and even more grateful that what
+        started as a student-teacher relationship has grown into a friendship
+        that I truly value. 💙
+      </p>
+    </article>
 
-      nav {
-        gap: 15px;
-      }
+    <!-- ONLINE TEACHING GALLERY -->
+    <div class="gallery-section">
+      <h3 class="gallery-title">Online English Teaching</h3>
+      <p class="gallery-description">
+        Online lessons that encourage students to practice, participate,
+        and build confidence in English.
+      </p>
 
-      .skill-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      <div class="portfolio-gallery">
 
-      .lesson-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: 0 auto;
-      }
+        <figure class="portfolio-photo">
+          <img src="555444836_24935262232770689_4872333875380901851_n.jpg"
+               alt="Online English teaching photo 1" loading="lazy">
+          <figcaption class="photo-caption">Online teaching experience</figcaption>
+        </figure>
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        max-width: 650px;
-        margin: 0 auto;
-      }
+        <figure class="portfolio-photo">
+          <img src="555559707_24935262376104008_540218712241684361_n.jpg"
+               alt="Online English teaching photo 2" loading="lazy">
+          <figcaption class="photo-caption">Supporting English learners</figcaption>
+        </figure>
 
-      .teacher-card {
-        max-width: 400px;
-        width: 100%;
-        margin: 0 auto;
-      }
-    }
+        <figure class="portfolio-photo">
+          <img src="555734653_24934160686214177_6254795431658929824_n.jpg"
+               alt="Online English teaching photo 3" loading="lazy">
+          <figcaption class="photo-caption">Interactive learning</figcaption>
+        </figure>
 
-    @media (max-width: 520px) {
-      .container {
-        width: 90%;
-      }
+        <figure class="portfolio-photo">
+          <img src="555751134_24935262669437312_7070554477957835704_n.jpg"
+               alt="Online English teaching photo 4" loading="lazy">
+          <figcaption class="photo-caption">Creating engaging lessons</figcaption>
+        </figure>
 
-      .section {
-        padding: 55px 0;
-      }
+        <figure class="portfolio-photo">
+          <img src="555885701_24930135609950018_4927241327735414191_n.jpg"
+               alt="Online English teaching photo 5" loading="lazy">
+          <figcaption class="photo-caption">English learning sessions</figcaption>
+        </figure>
 
-      .logo {
-        font-size: 19px;
-        text-align: center;
-      }
+        <figure class="portfolio-photo">
+          <img src="555913176_24935262549437324_1131423053088894612_n.jpg"
+               alt="Online English teaching photo 6" loading="lazy">
+          <figcaption class="photo-caption">Helping students grow</figcaption>
+        </figure>
 
-      nav {
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 13px;
-      }
-
-      .hero {
-        padding: 65px 0 70px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .skill-grid,
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-panel {
-        padding: 25px 16px;
-      }
-
-      .contact-link {
-        max-width: 100%;
-        padding: 12px 17px;
-        font-size: 14px;
-      }
-
-      .teacher-photo {
-        width: 160px;
-        height: 160px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <a class="logo" href="#home">English with Teacher April</a>
-
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#lessons">Lessons</a>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Teaching Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      </div>
     </div>
-  </header>
 
-  <main>
+    <!-- FACE-TO-FACE TEACHING GALLERY -->
+    <div class="gallery-section">
+      <h3 class="gallery-title">Face-to-Face Teaching</h3>
+      <p class="gallery-description">
+        My classroom teaching experience, where I help learners explore
+        English through direct interaction and guided activities.
+      </p>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <span class="hero-label">Private Online English Lessons</span>
+      <div class="portfolio-gallery">
 
-        <h1>English with Teacher April</h1>
+        <figure class="portfolio-photo">
+          <img src="556293608_24932078649755714_7870025972460188498_n.jpg"
+               alt="Face-to-face teaching photo 1" loading="lazy">
+          <figcaption class="photo-caption">Classroom teaching</figcaption>
+        </figure>
 
-        <h2>Learn English with Confidence</h2>
+        <figure class="portfolio-photo">
+          <img src="557597160_24935093436120902_8898969668384390970_n.jpg"
+               alt="Face-to-face teaching photo 2" loading="lazy">
+          <figcaption class="photo-caption">Learning together</figcaption>
+        </figure>
 
-        <p>
-          English is more fun when you learn with confidence.
-          Enjoy friendly, practical lessons designed around your
-          learning goals, level, and interests.
-        </p>
+        <figure class="portfolio-photo">
+          <img src="555885701_24930135609950018_4927241327735414191_n%20-%20Copy.jpg"
+               alt="Face-to-face teaching photo 3" loading="lazy">
+          <figcaption class="photo-caption">Teaching and interaction</figcaption>
+        </figure>
 
-        <a class="button" href="#contact">Book a Trial Lesson</a>
-      </div>
-    </section>
+        <figure class="portfolio-photo">
+          <img src="Screenshot%202026-10-27%20120155.png"
+               alt="Online teaching session screenshot 1" loading="lazy">
+          <figcaption class="photo-caption">Teaching session screenshot</figcaption>
+        </figure>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h2 class="section-title">What We Can Work On</h2>
+        <figure class="portfolio-photo">
+          <img src="Screenshot%202026-10-27%20120222.png"
+               alt="Online teaching session screenshot 2" loading="lazy">
+          <figcaption class="photo-caption">Online classroom experience</figcaption>
+        </figure>
 
-        <p class="section-intro">
-          Develop useful English skills through guided practice,
-          engaging activities, and real-life communication.
-        </p>
-
-        <div class="skill-grid">
-          <div class="skill-card">
-            <span class="skill-icon">🗣️</span>
-            Speaking and Conversation
-          </div>
-
-          <div class="skill-card">
-            <span class="skill-icon">📚</span>
-            Grammar and Vocabulary
-          </div>
-
-          <div class="skill-card">
-            <span class="skill-icon">🔤</span>
-            Reading and Phonics
-          </div>
-
-          <div class="skill-card">
-            <span class="skill-icon">💼</span>
-            Business English
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LESSON OPTIONS -->
-    <section id="lessons" class="section">
-      <div class="container">
-        <h2 class="section-title">Lessons for Your Goals</h2>
-
-        <p class="section-intro">
-          Whether you're learning for school, work, or everyday
-          communication, lessons can be tailored to your needs.
-        </p>
-
-        <div class="lesson-grid">
-          <article class="lesson-card">
-            <div class="lesson-icon">🧸</div>
-            <h3>Kids English</h3>
-            <p>
-              Fun and engaging lessons with phonics, vocabulary,
-              reading, speaking activities, and age-appropriate
-              learning materials.
-            </p>
-          </article>
-
-          <article class="lesson-card">
-            <div class="lesson-icon">🌷</div>
-            <h3>Adult English</h3>
-            <p>
-              Build confidence in speaking, grammar, vocabulary,
-              pronunciation, and everyday English conversations.
-            </p>
-          </article>
-
-          <article class="lesson-card">
-            <div class="lesson-icon">💻</div>
-            <h3>Business English</h3>
-            <p>
-              Practice English for meetings, presentations,
-              workplace communication, client calls, and
-              professional conversations.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT TEACHER -->
-    <section id="about" class="section about">
-      <div class="container about-grid">
-
-        <div class="teacher-card">
-          <!--
-            IMPORTANT:
-            Replace teacher-april.jpg with your actual photo filename.
-            Keep the photo in the same folder as index.html.
-          -->
-          <img
-            class="teacher-photo"
-            src="teacher-april.jpg"
-            alt="Teacher April"
-            loading="lazy"
-          >
-
-          <h3>Teacher April</h3>
-          <p>English Teacher</p>
-
-          <span class="credentials">
-            LPT · TEFL · TESOL · TEYL
-          </span>
-        </div>
-
-        <div class="about-text">
-          <h2>Hi, I'm Teacher April!</h2>
-
-          <p>
-            I have over six years of English teaching experience,
-            both online and face-to-face. I've taught more than
-            1000 students, from young children to adults, with
-            different English levels and cultural backgrounds.
-          </p>
-
-          <p>
-            I have experience teaching learners from countries
-            including Japan, China, and Korea. I also adapt my
-            teaching approach to suit individual learning needs.
-          </p>
-
-          <p>
-            My lessons focus on speaking, grammar, vocabulary,
-            reading, pronunciation, and practical communication.
-            I use guided conversations, visual materials,
-            activities, and real-life examples to make learning
-            more comfortable and engaging.
-          </p>
-
-          <p>
-            As a licensed professional teacher, I aim to create
-            a patient and supportive learning environment where
-            students can practice English without being afraid
-            of making mistakes.
-          </p>
-
-          <div class="teacher-quote">
-            "You don't have to speak perfect English to begin.
-            You just need the confidence to keep learning."
-          </div>
-        </div>
+        <figure class="portfolio-photo">
+          <img src="Screenshot%202026-10-15%20202629.png"
+               alt="Teaching portfolio screenshot" loading="lazy">
+          <figcaption class="photo-caption">My teaching journey</figcaption>
+        </figure>
 
       </div>
-    </section>
+    </div>
 
-    <!-- WHY CHOOSE TEACHER APRIL -->
-     <!-- TEACHING PORTFOLIO -->
-    <section id="portfolio" class="section skills">
-      <div class="container">
-        <h2 class="section-title">My Teaching Portfolio</h2>
+    <!-- TESTIMONIALS SECTION HEADING -->
+    <div id="testimonials">
+      <h3 class="testimonials-heading">What My Students Say About Me</h3>
+      <p class="portfolio-intro">
+        Every learner has a unique journey. I’m grateful to be part of my
+        students’ progress and to help them become more confident English speakers.
+      </p>
+    </div>
 
-        <p class="section-intro">
-          Explore examples of my teaching materials, learning
-          activities, and classroom experiences. I create
-          engaging lessons tailored to students' ages, levels,
-          and learning goals.
-        </p>
+    <!-- CONTACT CARD -->
+    <div class="contact-card">
+      <h3>Let’s Start Your English Journey!</h3>
+      <p>
+        Looking for personalized English lessons for yourself or your child?
+        Feel free to contact me to discuss your learning goals.
+      </p>
 
-        <div class="lesson-grid">
-          <article class="lesson-card">
-            <div class="lesson-icon">🔤</div>
-            <h3>Kids' English & Phonics</h3>
-            <p>
-              Interactive activities for vocabulary, pronunciation,
-              phonics, reading, and speaking practice.
-            </p>
-          </article>
-
-          <article class="lesson-card">
-            <div class="lesson-icon">💬</div>
-            <h3>Adult Conversation</h3>
-            <p>
-              Discussion questions, reading materials, and
-              practical activities to build speaking confidence.
-            </p>
-          </article>
-
-          <article class="lesson-card">
-            <div class="lesson-icon">💼</div>
-            <h3>Business English</h3>
-            <p>
-              Workplace vocabulary, professional emails,
-              meeting practice, and client-call role-plays.
-            </p>
-          </article>
-        </div>
-
-        <div style="text-align: center; margin-top: 35px;">
-          <p>
-            My portfolio also includes selected teaching
-            activities and classroom experiences.
-          </p>
-        </div>
+      <div class="contact-links">
+        <a href="mailto:aprilluv001@gmail.com">Email Me</a>
+        <a href="https://wa.me/639971274961" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.wechat.com/" target="_blank" rel="noopener noreferrer">Find Me on WeChat: April_Snow01</a>
       </div>
-    </section>
-    <section class="section why">
-      <div class="container">
-        <h2 class="section-title">Why Learn with Teacher April?</h2>
 
-        <p class="section-intro">
-          Your goals matter. Let's work together to make your
-          English learning experience useful, comfortable, and fun.
-        </p>
+      <p class="portfolio-tagline">
+        Build your English. Boost your confidence. Unlock your potential.
+        Your Journey Starts Here!
+      </p>
+    </div>
 
-        <div class="why-grid">
-          <article class="why-card">
-            <h3>🌷 Patient and Friendly</h3>
-            <p>
-              Practice in a supportive environment where questions
-              and mistakes are part of learning.
-            </p>
-          </article>
-
-          <article class="why-card">
-            <h3>🎯 Personalized Lessons</h3>
-            <p>
-              Learning activities are adapted to your level,
-              interests, and communication goals.
-            </p>
-          </article>
-
-          <article class="why-card">
-            <h3>💬 Speaking Practice</h3>
-            <p>
-              Develop confidence by using English in meaningful
-              conversations and practical situations.
-            </p>
-          </article>
-
-          <article class="why-card">
-            <h3>📖 Practical Materials</h3>
-            <p>
-              Learn with examples, visual aids, activities,
-              and useful vocabulary for everyday life.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT AND BOOKING -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Ready to Learn?</h2>
-
-        <p class="contact-intro">
-          Let's make English fun! Contact me to ask about
-          available schedules, lesson options, or a trial class.
-        </p>
-
-        <div class="contact-panel">
-          <h3>Book Your English Lesson</h3>
-
-          <p>
-            Have questions or want to schedule a trial lesson?
-            Choose your preferred way to contact me below.
-          </p>
-
-          <!-- WHATSAPP -->
-
-<!-- CONTACT DETAILS -->
-<div class="contact-details">
-  <p>
-    <strong>WhatsApp:</strong> +63 997 127 4961
-  </p>
-</div>
-
-          <!-- WECHAT -->
-          <div class="wechat-box">
-            <h3>Connect with Me on WeChat</h3>
-
-            <p>
-              Scan my WeChat QR code to connect and ask about lessons.
-            </p>
-
-            <!--
-              The QR image must be uploaded to the same folder
-              as index.html in your GitHub repository.
-            -->
-            <img
-              class="wechat-qr"
-              src="WhatsApp%20Image%202026-10-26%20at%202.12.50%20PM.jpeg"
-              alt="Teacher April's WeChat QR code"
-              loading="lazy"
-            >
-          </div>
-
-          <p class="booking-note">
-            When messaging me, please include the student's age,
-            learning goals, and preferred lesson schedule.
-          </p>
-
-          <!-- EMAIL -->
-          <a
-            class="contact-link"
-            href="mailto:aprilluv001@gmail.com?subject=Trial%20Lesson%20Inquiry"
-          >
-            ✉️ Email Teacher April
-          </a>
-
-          <p>
-            <a class="email-link" href="mailto:aprilluv001@gmail.com">
-              aprilluv001@gmail.com
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p><strong>English with Teacher April</strong></p>
-    <p>Private Online English Lessons</p>
-    <p>&copy; 2026 English with Teacher April. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+  </div>
+</section>
+<!-- END TEACHING PORTFOLIO SECTION -->
