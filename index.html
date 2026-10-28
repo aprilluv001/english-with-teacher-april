@@ -621,102 +621,146 @@
   border-radius: 12px;
   object-fit: contain;
 }
-  
-    /* NEW COLOR PALETTE: TEAL + PURPLE + SOFT YELLOW */
+ 
+/* BOLD LIME GREEN + PINK THEME */
 
-    :root {
-      --purple: #7952A0;
-      --purple-dark: #56366F;
-      --pink: #E8F5F2;
-      --pink-light: #F2FAF8;
-      --cream: #FFFCF3;
-      --text: #383442;
-      --white: #FFFFFF;
-    }
+:root {
+  --purple: #48251E;
+  --purple-dark: #321813;
+  --pink: #FFB9DD;
+  --pink-light: #FFF0F7;
+  --cream: #FFFCEB;
+  --text: #48251E;
+  --white: #FFFCEB;
+}
 
-    body {
-      background: var(--cream);
-    }
+body {
+  background: var(--cream);
+  color: var(--text);
+}
 
-    header {
-      border-bottom: 3px solid #EFD56D;
-    }
+header {
+  background: #FFB9DD;
+  border-bottom: 3px solid #48251E;
+}
 
-    nav a:hover {
-      color: #258C83;
-    }
+.logo,
+nav a {
+  color: #48251E;
+}
 
-    .button {
-      background: #258C83;
-      border-color: #258C83;
-    }
+nav a:hover {
+  color: #8A2862;
+}
 
-    .button:hover {
-      background: #176C65;
-      border-color: #176C65;
-    }
+.hero {
+  background: #C5D63F;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
-    .button-light {
-      background: white;
-      color: #258C83;
-      border-color: white;
-    }
+.hero h1,
+.hero h2,
+.hero p {
+  color: #48251E;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #DDF3EF, #FFFCF3);
-    }
+.hero-label {
+  background: #FFFCEB;
+  color: #48251E;
+}
 
-    .hero-label {
-      background: #FFF0AC;
-      color: #56366F;
-    }
+.button {
+  background: #48251E;
+  border-color: #48251E;
+  color: #FFFCEB;
+}
 
-    .skill-card {
-      background: #F0F9F7;
-      border-color: #B8DFD8;
-    }
+.button:hover {
+  background: #8A2862;
+  border-color: #8A2862;
+}
 
-    .lesson-card {
-      border-top-color: #E9C84A;
-    }
+.button-light {
+  background: #FFFCEB;
+  color: #48251E;
+  border-color: #48251E;
+}
 
-    .about {
-      background: #E8F5F2;
-    }
+.skills,
+.about,
+.contact {
+  background: #FFB9DD;
+  color: #48251E;
+}
 
-    .teacher-photo {
-      border-color: #F2D875;
-    }
+.skill-card,
+.teacher-card,
+.contact-panel {
+  background: #FFFCEB;
+  color: #48251E;
+  border: 2px solid #48251E;
+  border-radius: 4px;
+}
 
-    .credentials {
-      background: #FFF2B8;
-      color: #56366F;
-    }
+#lessons,
+#portfolio {
+  background: #C5D63F;
+}
 
-    .teacher-quote {
-      border-left-color: #258C83;
-      background: #FFFCF3;
-    }
+.lesson-card {
+  background: #FFFCEB;
+  border-top: 6px solid #FFB9DD;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 #48251E;
+}
 
-    .why-card {
-      background: #FFF8D9;
-    }
+.teacher-photo {
+  border-color: #C5D63F;
+}
 
-    .contact {
-      background: linear-gradient(135deg, #258C83, #176C65);
-    }
+.credentials {
+  background: #C5D63F;
+  color: #48251E;
+}
 
-    .contact-link {
-      color: #176C65;
-    }
+.teacher-quote {
+  background: #FFFCEB;
+  border-left-color: #C5D63F;
+}
 
-    .contact-link:hover {
-      background: #FFF0AC;
-    }
+.why {
+  background: #FFFCEB;
+}
 
-    footer {
-      background: #392D4B;
-    }
+.why-card {
+  background: #FFB9DD;
+  border-radius: 4px;
+}
+
+.contact .section-title {
+  color: #48251E;
+}
+
+.contact-link {
+  background: #48251E;
+  color: #FFFCEB;
+}
+
+.contact-link:hover {
+  background: #C5D63F;
+  color: #48251E;
+}
+
+.wechat-box {
+  background: #C5D63F;
+  color: #48251E;
+}
+
+footer {
+  background: #48251E;
+  color: #FFFCEB;
+} 
 </style>
 </head>
 
