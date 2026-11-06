@@ -872,6 +872,122 @@ footer {
   text-align: center;
   line-height: 1.8;
 }
+    /* CONTACT TEACHER APRIL */
+
+.contact-section {
+  padding: 70px 20px;
+  background: linear-gradient(
+    135deg,
+    #fff0f6,
+    #f5efff,
+    #fff9e8
+  );
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  color: #b84f85;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-intro {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 380px;
+  margin: 0 auto 40px;
+}
+
+.contact-btn {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.trial-btn {
+  background: #c75b91;
+  color: white;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.email-btn {
+  background: white;
+  color: #a64d80;
+  border: 1px solid #e8c1d5;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.wechat-contact {
+  margin: 35px auto;
+}
+
+.wechat-contact h3 {
+  color: #a64d80;
+  margin-bottom: 10px;
+}
+
+.wechat-contact p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.wechat-qr {
+  display: block;
+  width: 220px;
+  max-width: 80%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.wechat-caption {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.contact-email,
+.contact-phone {
+  color: #666;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 50px 18px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.7rem;
+  }
+}
 </style>
 </head>
 
@@ -1200,76 +1316,78 @@ footer {
       </div>
     </section>
 
-    <!-- CONTACT AND BOOKING -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Ready to Learn?</h2>
-  
-<p class="section-intro contact-intro">
-  Let's make English fun!Reach out to explore how I can help you improve your English.
-</p>
+<!-- CONTACT TEACHER APRIL -->
+<section class="section contact-section" id="contact">
+  <div class="contact-container">
 
-        <div class="contact-panel">
-          <h3>Book Your English Lesson</h3>
+    <h2>Let's Connect!</h2>
 
-<p class="section-intro booking-intro">
-  Ready to get started?<br>
-  Send me a message or book a trial lesson<br>
-  to discuss your learning goals and preferred schedule.
-</p>
-          <!-- WHATSAPP CONTACT -->
-          <p>
-            <strong>WhatsApp:</strong> +63 997 127 4961
-          </p>
+    <p class="contact-intro">
+      Ready to improve your English?
+      I'd love to help you reach your learning goals!
+      Choose your preferred way to contact me.
+    </p>
 
-          <a
-            class="contact-link"
-            href="https://wa.me/639971274961"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Message Me on WhatsApp
-          </a>
+    <div class="contact-buttons">
 
-          <!-- WECHAT QR CODE -->
-          <div class="wechat-box">
-            <h3>Connect with Me on WeChat</h3>
+      <a
+        href="https://calendly.com/aprilluv001/trial-english-lesson"
+        class="contact-btn trial-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📅 Book a Trial Lesson
+      </a>
 
-            <p>
-              Scan my WeChat QR code to connect and ask about lessons.
-            </p>
+      <a
+        href="https://wa.me/639971274961"
+        class="contact-btn whatsapp-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬 Chat with Me on WhatsApp
+      </a>
 
-            <p><strong>WeChat ID:</strong> April_Snow01</p>
+      <a
+        href="mailto:aprilluv001@gmail.com?subject=English%20Lesson%20Inquiry"
+        class="contact-btn email-btn"
+      >
+        ✉️ Email Teacher April
+      </a>
 
-            <img
-              class="wechat-qr"
-              src="WhatsApp%20Image%202026-10-26%20at%202.12.50%20PM.jpeg"
-              alt="Teacher April's WeChat QR code"
-              loading="lazy"
-            >
-          </div>
+    </div>
 
-          <p class="booking-note">
-            When messaging me, please include the student's age,<br>
-            learning goals, and preferred lesson schedule.
-          </p>
+    <div class="wechat-contact">
 
-          <!-- EMAIL -->
-        <a
-    class="contact-link"
-    href="mailto:aprilluv001@gmail.com?subject=Trial%20Lesson%20Inquiry"
->
-    ✉️ Email Teacher April: aprilluv001@gmail.com
-</a>
+      <h3>Connect with Me on WeChat</h3>
 
-          <p>
-            <a class="email-link" href="mailto:aprilluv001@gmail.com">
-              aprilluv001@gmail.com
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
+      <p>
+        Are you using WeChat? Scan my QR code
+        to connect with me directly!
+      </p>
+
+      <img
+        src="WhatsApp%20Image%202026-10-26%20at%202.12.50%20PM.jpeg"
+        alt="Teacher April's WeChat QR Code"
+        class="wechat-qr"
+      >
+
+      <p class="wechat-caption">
+        Scan to add Teacher April on WeChat.
+      </p>
+
+    </div>
+
+    <p class="contact-email">
+      <strong>Email:</strong> aprilluv001@gmail.com
+    </p>
+
+    <p class="contact-phone">
+      <strong>WhatsApp:</strong> +63 997 127 4961
+    </p>
+
+  </div>
+</section>
 
   </main>
 
